@@ -102,7 +102,7 @@ export default function App() {
                 {tenzies ? "Reset Game" : "Roll"}
             </button>
             {bestScore ? `Lowest Score: ${bestScore}` : `No games logged`}
-            <p>You're a bitch if you can't beat this</p>
+            <p>Updated</p>
         </main>
     )
 }
