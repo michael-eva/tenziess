@@ -102,7 +102,6 @@ export default function App() {
                 {tenzies ? "Reset Game" : "Roll"}
             </button>
             {bestScore ? `Lowest Score: ${bestScore}` : `No games logged`}
-            <p>Updated</p>
         </main>
     )
 }
