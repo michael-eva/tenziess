@@ -54,8 +54,6 @@ export default function App() {
             }
             setCount(0)
         }
-        console.log(count);
-        console.log(bestScore);
     }
     // holdDice is passed through the component as a prop
     //receieves the id back
