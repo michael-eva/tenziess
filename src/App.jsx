@@ -9,7 +9,7 @@ export default function App() {
     const [count, setCount] = useState(0)
     const [bestScore, setBestScore] = useState()
 
-    //use effect to sync tenzies with dice if true
+
     useEffect(() => {
         const allHeld = dice.every(die => die.isHeld)
         const firstValue = dice[0].value
@@ -102,6 +102,7 @@ export default function App() {
                 {tenzies ? "Reset Game" : "Roll"}
             </button>
             {bestScore ? `Lowest Score: ${bestScore}` : `No games logged`}
+            <p>updated</p>
         </main>
     )
 }
