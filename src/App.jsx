@@ -7,7 +7,7 @@ export default function App() {
     const [dice, setDice] = useState(allNewDice())
     const [tenzies, setTenzies] = useState(false)
     const [count, setCount] = useState(0)
-    const [bestScore, setBestScore] = useState(0)
+    const [bestScore, setBestScore] = useState()
 
     //use effect to sync tenzies with dice if true
     useEffect(() => {
@@ -55,6 +55,7 @@ export default function App() {
             setCount(0)
         }
         console.log(count);
+        console.log(bestScore);
     }
     // holdDice is passed through the component as a prop
     //receieves the id back
@@ -76,16 +77,16 @@ export default function App() {
     />))
 
     // setting and getting data from local storage
+
     useEffect(() => {
         const bestScoreFromLocalStorage = JSON.parse(localStorage.getItem('bestScore'));
-        if (bestScoreFromLocalStorage !== undefined) {
+        if (bestScoreFromLocalStorage !== null) {
             setBestScore(bestScoreFromLocalStorage);
         }
     }, []);
     useEffect(() => {
         localStorage.setItem('bestScore', JSON.stringify(bestScore))
     }, [bestScore])
-
 
 
     return (
